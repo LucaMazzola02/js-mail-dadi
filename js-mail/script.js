@@ -1,14 +1,25 @@
-let userEmail = prompt('Dimmi la tua email');
-
 const emailList = ['mario.rossi@gmail.com', 'matteo.verdi@gmail.com', 'marco.gialli@gmail.com' ];
 
-if ( userEmail === emailList){
+const userEmail = prompt('Dimmi la tua email');
 
-    document.querySelector('pre').innerHTML = 'CORRECTO, PUEDES ENTRAR!';
+let mailFound = false;
+
+
+for( let i = 0; i < emailList.length; i++){
+
+    if(userEmail === emailList[i]){
+
+        mailFound = true;
+    };
+
+};
+
+if(mailFound == true){
+
+    console.log('Access valid')
 
 }else{
 
-    document.querySelector('pre').innerHTML = 'EQUIVOCADO, NO PUEDES ENTRAR!';
-
-
+    console.log('access denied')
+    
 };
